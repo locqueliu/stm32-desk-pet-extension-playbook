@@ -2,9 +2,9 @@
 
 [English Version](./README.md)
 
-这个仓库更像我整理 STM32 桌宠项目扩展思路的工作笔记。
+这个仓库更像我整理 STM32 桌宠项目扩展思路时留下来的一本工作笔记。
 
-我对这个项目最感兴趣的地方，不只是“它能动起来”，而是它背后那套交互结构。蓝牙和语音命令怎么落到动作上，OLED 表情怎么跟动作状态对起来，控制逻辑有没有可能拆得更清楚，这些东西比单纯把功能堆上去更让我想继续往下做。
+我对这个项目最上头的地方，不只是“它能动”，而是它背后那套交互结构。蓝牙和语音命令怎么落到动作上，OLED 表情怎么跟动作状态对起来，控制逻辑还有没有机会拆得更顺，这些东西对我来说比单纯往上堆功能更有意思。
 
 ## 上游项目
 
@@ -24,7 +24,7 @@
 
 ## 仓库结构
 
-- [`docs/upstream-reference.md`](./docs/upstream-reference.md) 来源关系和协议背景
+- [`docs/upstream-reference.md`](./docs/upstream-reference.md) 来源关系和许可证背景
 - [`docs/module-breakdown.md`](./docs/module-breakdown.md) 模块级阅读整理
 - [`docs/extension-roadmap.md`](./docs/extension-roadmap.md) 我觉得适合继续推进的方向
 - [`examples/command_map.example.json`](./examples/command_map.example.json) 动作命令映射
