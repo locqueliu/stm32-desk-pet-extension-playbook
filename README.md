@@ -1,49 +1,37 @@
 # stm32-desk-pet-extension-playbook
 
-Public-safe documentation and clean-room examples for secondary development around an STM32 desktop pet project.
+[Chinese Version](./README_zh.md)
 
-## Upstream Reference
+This repository is where I keep my notes for extending an STM32 desktop pet project.
 
-This repository is built as a portfolio-safe companion to the upstream hardware project:
+What interests me most in this project is not only the finished behavior, but the interaction structure behind it: how Bluetooth and voice commands map into actions, how OLED expressions stay in sync with movement, and how the control logic can be refactored into something easier to expand.
 
-- Upstream project: [Sngels_wyh / STM32 Smart Desktop Pet](https://oshwhub.com/sngelswyh/stm32-smart-desktop-pet)
-- Upstream platform: `OSHWHub`
-- Public article reference: [CSDN project article](https://blog.csdn.net/2402_83438920/article/details/145213286)
-- Observed upstream license: `GPL 3.0`
+## Upstream
 
-The local project header comment explicitly points to the OSHWHub page above, so this upstream is cited before any public publication.
+- Project: [Sngels_wyh / STM32 Smart Desktop Pet](https://oshwhub.com/sngelswyh/stm32-smart-desktop-pet)
+- Platform: `OSHWHub`
+- Public article: [CSDN project article](https://blog.csdn.net/2402_83438920/article/details/145213286)
+- License observed: `GPL 3.0`
 
-This repo does **not** re-upload the original firmware source or private local modifications. It focuses on:
+The local source tree I studied points back to the OSHWHub project above. This repository keeps my architecture notes, module breakdowns, and small clean-room examples while the actual derivative firmware work stays separate.
 
-- architecture understanding
-- extension planning
-- clean-room examples
-- publication-safe attribution
+## What I keep here
 
-## What This Repo Covers
+- module breakdown notes for the original project
+- action-state and command-routing observations
+- extension ideas for OLED expressions, servo actions, and command handling
+- clean-room examples for dispatch-table style refactors
 
-- STM32F103 desktop pet module breakdown
-- action state machine interpretation
-- dual command-input idea for Bluetooth and voice modules
-- OLED expression and servo action expansion planning
-- AI-assisted refactor notes for later secondary development
+## Repository structure
 
-## Why This Exists
+- [`docs/upstream-reference.md`](./docs/upstream-reference.md) source relationship and license context
+- [`docs/module-breakdown.md`](./docs/module-breakdown.md) module-level reading notes
+- [`docs/extension-roadmap.md`](./docs/extension-roadmap.md) where I would push the project next
+- [`examples/command_map.example.json`](./examples/command_map.example.json) action command mapping
+- [`examples/action_dispatch_example.c`](./examples/action_dispatch_example.c) dispatch-table refactor sketch
+- [`NOTICE.md`](./NOTICE.md) attribution and release boundary
 
-The original project already demonstrates a strong embedded interaction prototype: servo movement, Bluetooth control, voice-triggered actions, OLED face rendering, and LED breathing effects.
-
-For portfolio use, the safer public approach is not to upload a private modified copy directly. Instead, this repo documents the engineering understanding and the extension directions developed during private experimentation.
-
-## Repository Structure
-
-- [`docs/upstream-reference.md`](./docs/upstream-reference.md): source attribution and publication boundary
-- [`docs/module-breakdown.md`](./docs/module-breakdown.md): module-level understanding of the base desk pet project
-- [`docs/extension-roadmap.md`](./docs/extension-roadmap.md): ideas for action, expression, and voice extensions
-- [`examples/command_map.example.json`](./examples/command_map.example.json): sanitized action command mapping
-- [`examples/action_dispatch_example.c`](./examples/action_dispatch_example.c): clean-room dispatch-table example
-- [`NOTICE.md`](./NOTICE.md): attribution, license, and public release scope
-
-## System View
+## System view
 
 ```mermaid
 flowchart LR
@@ -59,24 +47,22 @@ flowchart LR
     J --> I
 ```
 
-## Public-Safe Highlights
+## What I find valuable in this project
 
-- documents a real embedded interaction project without leaking private files
-- shows understanding of state-driven motion control
-- demonstrates how to prepare derivative work responsibly when upstream is GPL
-- turns private experimentation into reusable portfolio material
+- it already has a strong input -> state -> behavior structure
+- movement and expression are tightly connected, which makes it fun to extend
+- the codebase is a good candidate for command normalization and dispatch cleanup
+- it is a practical embedded interaction project instead of a toy example
 
-## Secondary Development Themes
+## Next directions
 
-- modularize motion actions into clearer dispatch tables
-- separate command decoding from behavior execution
-- expand OLED expression presets and action-emotion pairing
-- reserve hooks for offline voice command sets or AI-assisted interaction flows
+- separate command decoding from action execution
+- refactor repeated branches into dispatch tables
+- expand expression presets and emotion-to-action pairing
+- leave cleaner hooks for offline voice keywords or AI-assisted interaction
 
-## Publication Note
+## Note
 
-If you want to publish actual firmware modifications derived from the upstream code, you should work from the original upstream project and comply with its license requirements:
+If you plan to publish actual derivative firmware, review the upstream project and its license terms first:
 
 - [Sngels_wyh / STM32 Smart Desktop Pet](https://oshwhub.com/sngelswyh/stm32-smart-desktop-pet)
-
-This repository is intentionally documentation-first and does not replace the upstream project.
