@@ -1,0 +1,24 @@
+# build output
+Objects/
+Listings/
+build/
+dist/
+
+# editors
+.vscode/
+.idea/
+
+# local overrides
+.env
+.env.*
+local/
+
+# binaries
+*.axf
+*.bin
+*.elf
+*.hex
+*.map
+*.o
+*.d
+*.crf

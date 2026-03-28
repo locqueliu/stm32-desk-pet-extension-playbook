@@ -1,0 +1,17 @@
+{
+  "0x29": "relaxed_getdown",
+  "0x30": "sit",
+  "0x31": "upright",
+  "0x32": "getdown",
+  "0x33": "advance",
+  "0x34": "back",
+  "0x35": "rotate_left",
+  "0x36": "rotate_right",
+  "0x37": "swing",
+  "0x40": "tail_swing_toggle",
+  "0x41": "jump_forward",
+  "0x42": "jump_backward",
+  "0x43": "hello",
+  "0x48": "stretch",
+  "0x49": "leg_stretch"
+}
