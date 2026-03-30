@@ -1,3 +1,5 @@
+![Repo banner](./assets/repo-banner.svg)
+
 # stm32-desk-pet-extension-playbook
 
 [Chinese Version](./README_zh.md)
